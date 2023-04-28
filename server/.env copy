@@ -1,0 +1,9 @@
+# Database
+DB_NAME=database_name
+DB_USER=postgres
+DB_PASSWORD=
+DB_HOST=localhost
+DB_PORT=5432
+
+#JWT
+ACCESS_TOKEN_CODE=accesstokencode
