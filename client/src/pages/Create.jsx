@@ -46,6 +46,11 @@ const Create = () => {
                 });
         }
     }
+    const logout = (e) => {
+        e.preventDefault();
+        sessionStorage.removeItem("token");
+        window.location.reload();
+    }
     useEffect(() => {
       if(!token){
         navigate('/login')
@@ -59,7 +64,7 @@ const Create = () => {
                     <span className="navbar-brand">
                         CRUD Product App
                     </span>
-                    <span>
+                    <span onClick={logout}>
                         Logout
                     </span>
                 </div>

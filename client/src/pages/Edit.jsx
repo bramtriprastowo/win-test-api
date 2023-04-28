@@ -50,6 +50,11 @@ const Edit = () => {
                 });
         }
     }
+    const logout = (e) => {
+        e.preventDefault();
+        sessionStorage.removeItem("token");
+        window.location.reload();
+    }
     useEffect(() => {
         const token = sessionStorage.getItem("token");
         if (!token) {
@@ -72,7 +77,7 @@ const Edit = () => {
                     <span className="navbar-brand">
                         CRUD Product App
                     </span>
-                    <span>
+                    <span onClick={logout}>
                         Logout
                     </span>
                 </div>

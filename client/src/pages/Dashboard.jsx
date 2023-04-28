@@ -34,6 +34,11 @@ const Dashboard = () => {
             });
           }
     }
+    const logout = (e) => {
+        e.preventDefault();
+        sessionStorage.removeItem("token");
+        window.location.reload();
+    }
 
     useEffect(() => {
         const token = sessionStorage.getItem("token");
@@ -64,7 +69,7 @@ const Dashboard = () => {
                     <span className="navbar-brand">
                         CRUD Product App
                     </span>
-                    <span>
+                    <span onClick={logout}>
                         Logout
                     </span>
                 </div>

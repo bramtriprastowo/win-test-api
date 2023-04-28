@@ -1,0 +1,866 @@
+{
+	"info": {
+		"_postman_id": "ba34c355-8dec-4d29-b0be-dc00a6d27b00",
+		"name": "WIN-CRUD-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15820714"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bram@gmail.com\",\r\n    \"fullname\": \"Bram Tri\",\r\n    \"gender\": \"male\",\r\n    \"password\": \"bram123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - success to register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"bram@gmail.com\",\r\n    \"fullname\": \"Bram Tri\",\r\n    \"gender\": \"male\",\r\n    \"password\": \"bram123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-AtCqpu7LLaXt1yEQqkeP8++uSHo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 01:38:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Create user success!\",\n    \"data\": {\n        \"userId\": \"adedf344-8e7c-4898-b2e2-b45db3d553c9\",\n        \"email\": \"bram@gmail.com\",\n        \"fullname\": \"Bram Tri\",\n        \"gender\": \"male\",\n        \"updatedAt\": \"2023-04-28T01:38:46.743Z\",\n        \"createdAt\": \"2023-04-28T01:38:46.743Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - success to get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "600"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"258-ecHQYiGhChQgrQ4qm2oa0VMo2uU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 01:39:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Get all users success!\",\n    \"data\": [\n        {\n            \"userId\": \"0a659cc6-638d-4ed8-bb5b-d9843448c000\",\n            \"email\": \"bramono@gmail.com\",\n            \"fullname\": \"Bramono Tri\",\n            \"gender\": \"male\",\n            \"password\": \"$2a$10$QQeUfCfc1baJUEtu6Csu7ON2Ve4Y0pFFEF9neUtR7rJhZdweaDHNe\",\n            \"createdAt\": \"2023-04-28T01:34:25.192Z\",\n            \"updatedAt\": \"2023-04-28T01:34:25.192Z\"\n        },\n        {\n            \"userId\": \"adedf344-8e7c-4898-b2e2-b45db3d553c9\",\n            \"email\": \"bram@gmail.com\",\n            \"fullname\": \"Bram Tri\",\n            \"gender\": \"male\",\n            \"password\": \"$2a$10$K7vSwdp1755hN/7PoDvbiOxtyoHHGNgPxowTTN8WmRsalUCvhQFcC\",\n            \"createdAt\": \"2023-04-28T01:38:46.743Z\",\n            \"updatedAt\": \"2023-04-28T01:38:46.743Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bramono@gmail.com\",\r\n    \"password\": \"bramono123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - login success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"bramono@gmail.com\",\r\n    \"password\": \"bramono123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "433"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b1-CyWIrORmsCgblU+gritw6FFc154\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 01:42:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Login success!\",\n    \"data\": {\n        \"userId\": \"0a659cc6-638d-4ed8-bb5b-d9843448c000\",\n        \"email\": \"bramono@gmail.com\",\n        \"fullname\": \"Bramono Tri\",\n        \"gender\": \"male\",\n        \"createdAt\": \"2023-04-28T01:34:25.192Z\",\n        \"updatedAt\": \"2023-04-28T01:34:25.192Z\",\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyYW1vbm9AZ21haWwuY29tIiwiaWF0IjoxNjgyNjQ2MTUwLCJleHAiOjE2ODI2NDcwNTB9.6bC2CiK-QxJPzE8RwEA9NBjIciZZJb_qWHrZ2HCVCr8\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYTY1OWNjNi02MzhkLTRlZDgtYmI1Yi1kOTg0MzQ0OGMwMDAiLCJlbWFpbCI6ImJyYW1vbm9AZ21haWwuY29tIiwiaWF0IjoxNjgyNjQ2MzEzLCJleHAiOjE2ODI2NDcyMTN9.nioDo-DomthCV827fV3oCze4VHI_O9HU_pvbBZRG2hc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "401 - no access token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"profile"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-zAvQNmicIhVE1zHC493wAueVIkI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 01:43:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Unauthorized\",\n    \"message\": \"Access token not found\",\n    \"data\": []\n}"
+						},
+						{
+							"name": "200 - success to get profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/users/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "257"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"101-kPm6oLQw/877I2Zm4792UfarI8Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 01:45:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Get profile success!\",\n    \"data\": {\n        \"userId\": \"0a659cc6-638d-4ed8-bb5b-d9843448c000\",\n        \"email\": \"bramono@gmail.com\",\n        \"fullname\": \"Bramono Tri\",\n        \"gender\": \"male\",\n        \"createdAt\": \"2023-04-28T01:34:25.192Z\",\n        \"updatedAt\": \"2023-04-28T01:34:25.192Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAsImVtYWlsIjoiYnJhbW9ub0BnbWFpbC5jb20iLCJpYXQiOjE2ODE3MTUwMzUsImV4cCI6MTY4MTcxNTkzNX0.RS_BCTJsuLfQBiOXVDYKtUagvxHZjJ56UX_rQ-LFJLw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - success to get product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/products/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "278"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"116-wifkc2MEq55Ov6Y/bsMc2+dit9E\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 04:34:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Get all products success!\",\n    \"data\": [\n        {\n            \"productId\": \"68837684-4de8-4d6e-8599-0db717d10071\",\n            \"productName\": \"Book\",\n            \"stock\": 45,\n            \"createdAt\": \"2023-04-28T04:33:17.211Z\",\n            \"updatedAt\": \"2023-04-28T04:33:17.211Z\",\n            \"userId\": \"0a659cc6-638d-4ed8-bb5b-d9843448c000\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Insert Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYTY1OWNjNi02MzhkLTRlZDgtYmI1Yi1kOTg0MzQ0OGMwMDAiLCJlbWFpbCI6ImJyYW1vbm9AZ21haWwuY29tIiwiaWF0IjoxNjgyNjU2MjgyLCJleHAiOjE2ODI2NTcxODJ9.yhp6fXYWinOUtI_m76Dyu2TYnVK76eYKJh6cZqcfJ5s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"Book\",\r\n    \"stock\": 45\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - success to create product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"Book\",\r\n    \"stock\": 45\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/products/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "274"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"112-VYZQCmCJ3DjokXG12Ozh1waRCn4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 04:33:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Insert product success!\",\n    \"data\": {\n        \"productId\": \"68837684-4de8-4d6e-8599-0db717d10071\",\n        \"productName\": \"Book\",\n        \"stock\": 45,\n        \"userId\": \"0a659cc6-638d-4ed8-bb5b-d9843448c000\",\n        \"updatedAt\": \"2023-04-28T04:33:17.211Z\",\n        \"createdAt\": \"2023-04-28T04:33:17.211Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJicmFtQGdtYWlsLmNvbSIsImlhdCI6MTY4MTY0MTcxOCwiZXhwIjoxNjgxNjQyNjE4fQ.XarLoVfc8dK7LiyzANsgSbEnry80Dtx5r4Cb7KxeUjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sensorName\": \"temperature\",\r\n    \"value\": 28\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/sensors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"sensors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - success to update product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"Pencil 2B\",\r\n    \"stock\": 28\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/products/68837684-4de8-4d6e-8599-0db717d10071",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"68837684-4de8-4d6e-8599-0db717d10071"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-PfVOXNIlhFNL9NSQ4SYl7uupQWA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 05:42:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Update product success!\",\n    \"data\": [\n        1\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJicmFtQGdtYWlsLmNvbSIsImlhdCI6MTY4MTY0MTcxOCwiZXhwIjoxNjgxNjQyNjE4fQ.XarLoVfc8dK7LiyzANsgSbEnry80Dtx5r4Cb7KxeUjI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/sensors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"sensors",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - success to delete product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/products/a3f2721b-dc97-4621-b360-7a457c3da87e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"products",
+										"a3f2721b-dc97-4621-b360-7a457c3da87e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-IY02RQ68fUFOEnsTPnssR2WT5kw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Apr 2023 08:21:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"message\": \"Delete product success!\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
