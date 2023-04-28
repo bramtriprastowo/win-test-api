@@ -1,0 +1,2 @@
+Untuk pengerjaan tes CRUD dengan autentikasi ini saya menggunakan NodeJS (Express) dan PostgreSQL untuk backendnya. Tabel yang digunakan ada 2, yakni tabel user untuk menyimpan data user, dan tabel produk untuk melakukan CRUD produk.
+Untuk frontend menggunakan React JS dengan Bootstrap. Terima kasih.
